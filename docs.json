@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
-  "name": "Short Range Technologies",
+  "theme": "mint",
+  "name": "Shortrange.tech Docs",
   "colors": {
     "primary": "#ef7025",
     "light": "#eec9bc",
@@ -15,7 +15,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "OpenDoorsim",
+        "tab": "OpenDoorSim Docs",
         "groups": [
           {
             "group": "Overview",
@@ -34,7 +34,7 @@
           {
             "group": "Build Guides",
             "pages": [
-              "opendoorsim/build-guides/frame",
+              "opendoorsim/build-guides/board",
               "opendoorsim/build-guides/electronics",
               "opendoorsim/build-guides/software-setup"
             ]
@@ -54,7 +54,9 @@
               "opendoorsim/changelog"
             ]
           }
-        ]
+        ],
+        "icon": "binary",
+        "hidden": true
       },
       {
         "tab": "Events & Talks",
@@ -73,7 +75,8 @@
               "talks/featured"
             ]
           }
-        ]
+        ],
+        "hidden": true
       },
       {
         "tab": "Quick Reference",
@@ -87,7 +90,8 @@
               "reference/resources"
             ]
           }
-        ]
+        ],
+        "hidden": true
       }
     ]
   },
@@ -105,7 +109,16 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/shortrangetechnologies"
+      "github": "https://github.com/shortrangetechnologies",
+      "linkedin": "https://www.linkedin.com/in/shortrange",
+      "youtube": "https://www.youtube.com/@ShortrangeTech",
+      "website": "https://shortrange.tech"
     }
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "appearance": {
+    "default": "dark"
   }
 }
