@@ -30,6 +30,7 @@
             "pages": [
               "opendoorsim/user-manuals/operating-guide",
               "opendoorsim/user-manuals/configuration",
+              "opendoorsim/user-manuals/flashing-firmware",
               "opendoorsim/user-manuals/troubleshooting"
             ],
             "icon": "book-open"
@@ -39,6 +40,7 @@
             "icon": "hammer",
             "pages": [
               "opendoorsim/build-guides/open-door-sim-board",
+              "opendoorsim/build-guides/screen-and-encoder",
               "opendoorsim/build-guides/lab-case"
             ]
           },
@@ -54,19 +56,18 @@
                 ]
               },
               {
+                "group": "Screen and Encoder",
+                "pages": [
+                  "bill-of-materials-1"
+                ]
+              },
+              {
                 "group": "LAB Case",
                 "pages": [
                   "bill-of-materials",
                   "3-d-print-guide"
                 ]
               }
-            ]
-          },
-          {
-            "group": "Contributing",
-            "pages": [
-              "opendoorsim/contributing",
-              "opendoorsim/changelog"
             ]
           }
         ],
