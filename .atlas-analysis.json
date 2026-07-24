@@ -1,17 +1,11 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
+  "projectType": "general",
+  "projectName": "Short Range Technologies",
+  "projectDescription": "A centralized hub for the OpenDoorsim open-source project, community events, talks, and quick reference resources.",
   "theme": "maple",
-  "name": "Short Range Technologies",
-  "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
-  },
-  "favicon": "/favicon.svg",
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "primaryColor": "#ef7025",
+  "lightColor": "#eec9bc",
+  "darkColor": "#4fa1ab",
   "navigation": {
     "tabs": [
       {
@@ -91,21 +85,14 @@
       }
     ]
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "GitHub",
-        "href": "https://github.com/shortrangetechnologies"
-      }
-    ],
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/shortrangetechnologies"
-    }
-  },
-  "footer": {
-    "socials": {
-      "github": "https://github.com/shortrangetechnologies"
-    }
-  }
+  "keyFeatures": [
+    "OpenDoorsim open-source door simulator project",
+    "Detailed bill of materials and hardware specifications",
+    "Step-by-step build guides for frame, electronics, and software",
+    "Comprehensive user manuals and configuration documentation",
+    "Community events calendar and upcoming event listings",
+    "Archived talks and featured presentations",
+    "Quick reference glossary and FAQ"
+  ],
+  "publicApiSurface": []
 }

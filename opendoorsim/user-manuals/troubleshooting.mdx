@@ -1,0 +1,75 @@
+---
+title: "Troubleshoot OpenDoorsim: Common Issues & Fixes"
+sidebarTitle: "Troubleshooting"
+description: "Diagnose and fix the most common OpenDoorsim hardware and software issues, from serial connection failures to erratic sensor readings."
+---
+
+This page covers the most common issues users encounter with OpenDoorsim — whether they relate to hardware wiring, firmware, or the companion app — and walks through the steps to resolve each one.
+
+<AccordionGroup>
+
+  <Accordion title="App won't connect to Arduino">
+    If the status bar stays red or grey after clicking **Connect**, work through the following checks:
+
+    1. **Check the USB cable** — try a different cable. Many cheap USB cables are charge-only and do not carry data.
+    2. **Verify the correct COM port is selected** in the Settings menu. The port changes if you plug the Arduino into a different USB port.
+    3. **Windows:** Open **Device Manager** → **Ports (COM & LPT)** and confirm the Arduino appears. Note the COM number and match it in the app.
+    4. **Linux / macOS:** Check that a `/dev/ttyUSB*` or `/dev/ttyACM*` device appears when the Arduino is plugged in (`ls /dev/tty*`). On Linux you may need to add your user to the `dialout` group: `sudo usermod -aG dialout $USER` then log out and back in.
+    5. **Reinstall the CH340 driver** if the device does not appear at all. Download the latest driver from the manufacturer's site and restart your machine after installation.
+  </Accordion>
+
+  <Accordion title="No sensor readings / all zeros">
+    If the dashboard shows zeros for all sensors throughout a session:
+
+    1. **Verify wiring against the electronics guide** — double-check every connection for the load cell (HX711), rotary encoder, and reed switches.
+    2. **Check breadboard connections** — a loose jumper wire on a breadboard is the most common cause of silent zero readings. Reseat all wires firmly.
+    3. **Confirm the firmware was uploaded successfully** — open the Arduino IDE Serial Monitor (115200 baud) and check for the expected JSON output from the firmware. If you see nothing, re-upload the firmware via **Sketch → Upload**.
+  </Accordion>
+
+  <Accordion title="Load cell reads incorrect values">
+    If force readings are wildly inaccurate or inconsistent:
+
+    1. **Re-run the Calibration Wizard** via **Settings → Sensors → Run Calibration Wizard**. Use a known reference weight (e.g., a calibrated dumbbell plate) for best results.
+    2. **Verify HX711 wiring** — confirm that the `DOUT` and `SCK` pins are not swapped. `DOUT` → Arduino pin `A1`, `SCK` → Arduino pin `A0` (see the electronics guide for your exact pinout).
+    3. **Check for mechanical overload** — if the load cell was subjected to a force beyond its rated capacity, the strain gauges may be permanently deformed. Inspect the load cell beam for visible bending and replace it if damaged.
+  </Accordion>
+
+  <Accordion title="Encoder angle jumps erratically">
+    Erratic or noisy angle readings from the rotary encoder are usually caused by one of the following:
+
+    1. **Swapped A/B wires** — if the angle jumps rather than increments smoothly, swap the A and B signal wires on the encoder connector.
+    2. **CPU overload** — if `sample_rate_hz` is set very high (above 100 Hz), the host PC may not keep up with the serial stream. Reduce `sample_rate_hz` in `config.json` to `50` and restart the app.
+    3. **Electrical noise** — add a **100 nF ceramic decoupling capacitor** across the encoder's VCC and GND pins (as close to the encoder as possible) to filter high-frequency noise.
+  </Accordion>
+
+  <Accordion title="Door angle stuck at 0 or 180 degrees">
+    If the Door Angle widget never moves from 0° or 180°:
+
+    1. **Check reed switch placement** — the two reed switches should be positioned so that one triggers at the fully-closed position and the other at the fully-open position. Re-seat the magnets and switches as described in the hardware assembly guide.
+    2. **Verify D6/D7 wiring** — the fully-closed reed switch should be wired to Arduino digital pin **D6**, and the fully-open switch to **D7**. Check that these have not been swapped or disconnected.
+  </Accordion>
+
+  <Accordion title="App crashes on startup">
+    If the companion app crashes immediately after launching:
+
+    1. **Delete `config.json`** and relaunch the app — it will regenerate a clean default configuration file. You will need to re-enter your serial port and re-run calibration afterwards.
+    2. **Check system requirements** — the app requires a 64-bit OS, at least 4 GB RAM, and a USB 2.0 or higher port. Ensure your machine meets these minimums.
+    3. Check the application log file (located in the same directory as `config.json`) for a more detailed error message.
+  </Accordion>
+
+  <Accordion title="Data export produces empty file">
+    If the exported CSV or JSON file is 0 bytes or contains only headers:
+
+    1. **Ensure a session was recorded before exporting** — you must click **Start Recording** and then **Stop Recording** to capture data. Exporting immediately after connecting without recording a session will produce an empty file.
+    2. **Check `export_path` in `config.json`** — verify that the directory exists and that the application has write permission to it. On macOS and Linux, check folder permissions with `ls -la` on the parent directory.
+  </Accordion>
+
+</AccordionGroup>
+
+## Getting More Help
+
+If the steps above don't resolve your issue, the following resources are available:
+
+- **GitHub Issues** — search existing issues or open a new one at the [OpenDoorsim GitHub repository](https://github.com). Include your OS, app version, and a copy of your log file.
+- **Contributing guide** — see the [Contributing](/opendoorsim/contributing) page for information on how to report bugs and suggest fixes.
+- **Community Discussion** — join the conversation and ask questions on [GitHub Discussions](https://github.com) (placeholder link — see repository for the direct Discussions URL).

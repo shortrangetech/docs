@@ -1,0 +1,54 @@
+---
+title: "OpenDoorsim Operating Guide: Daily Use & Controls"
+sidebarTitle: "Operating Guide"
+description: "Learn how to power on, run simulation sessions, and interpret dashboard readings with the OpenDoorsim rig day-to-day."
+---
+
+This guide covers everything you need to operate the OpenDoorsim rig on a daily basis — from powering on the hardware and connecting to the companion app, to running a full simulation session and interpreting the readings displayed on the dashboard.
+
+## Powering On
+
+Before launching the companion app, make sure the hardware is ready:
+
+1. Ensure all sensor cables (load cell, rotary encoder, reed switches) are securely connected to the Arduino and breadboard.
+2. Plug the Arduino USB cable into your PC.
+3. Launch the **OpenDoorsim companion app**.
+4. Select the correct COM/serial port from the **Settings** menu.
+5. Click **"Connect"** — the status bar at the bottom of the app should turn **green** to confirm a successful connection.
+
+## Running a Session
+
+Once connected, you can begin a simulation session:
+
+- Enter a descriptive name for your session in the **Session** field.
+- Select a **simulation profile** from the dropdown (e.g., Standard Door, Fire Door, Accessibility Test).
+- Click **"Start Recording"** to begin data capture.
+- Perform your door operations — open, close, and apply force as needed for the test scenario.
+- Click **"Stop Recording"** when you have finished the test run.
+- Export your data via **File → Export** and choose either **CSV** or **JSON** format.
+
+## Reading the Dashboard
+
+The OpenDoorsim dashboard provides four main widgets that update in real time during a session:
+
+| Widget | Description |
+|--------|-------------|
+| **Door Angle** | Current door position in degrees (0° = fully closed, 90° = fully open) |
+| **Force Applied** | Live force reading from the load cell in kilograms |
+| **Open/Close State** | Binary indicator driven by the reed switches — shows *Open* or *Closed* |
+| **Event Log** | Timestamped log of all state changes and threshold breaches during the session |
+
+## Session Profiles
+
+OpenDoorsim ships with several built-in profiles designed to match common door testing standards. Choose the profile that best fits your testing scenario before starting a session.
+
+| Profile | Description |
+|---------|-------------|
+| Standard Door | Baseline residential door swing testing |
+| Fire Door | Tests for required closing force and speed |
+| Accessibility Test | ADA/ISO compliance measurements |
+| Custom | User-defined thresholds |
+
+<Tip>
+  Save your frequently used profile settings as **presets** using the **Save Preset** button in the Profiles menu. Presets are stored in `config.json` and can be shared across machines for repeatable, consistent testing.
+</Tip>

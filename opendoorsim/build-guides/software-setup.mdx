@@ -1,0 +1,94 @@
+---
+title: "Set Up OpenDoorsim Software: Firmware & Config Guide"
+sidebarTitle: "Software Setup"
+description: "Install and configure the OpenDoorsim Arduino firmware and companion desktop software to visualize and log door simulation data."
+---
+
+This guide covers flashing the Arduino firmware and setting up the companion desktop software to visualize and log door simulation data. By the end of this guide, your OpenDoorsim rig will be fully operational — streaming live sensor readings into the companion app and ready for calibration. Complete the [electronics wiring](/opendoorsim/build-guides/electronics) before starting this phase.
+
+## System Requirements
+
+Ensure your development machine meets the following minimum specifications before proceeding:
+
+| Component | Minimum |
+|-----------|---------|
+| OS | Windows 10, macOS 12, or Ubuntu 20.04+ |
+| CPU | Dual-core 2 GHz |
+| RAM | 4 GB |
+| Disk | 500 MB free |
+| USB | Type-A port |
+
+## Setup Steps
+
+<Steps>
+  <Step title="Install Arduino IDE">
+    Download the latest **Arduino IDE 2.x** from [arduino.cc/en/software](https://www.arduino.cc/en/software) and run the installer for your operating system. Accept the default installation path and allow the installer to add USB driver support when prompted (required for COM port detection on Windows). Launch the IDE once to complete first-run initialization before proceeding.
+  </Step>
+
+  <Step title="Install Required Libraries">
+    Open the Arduino IDE and navigate to **Sketch → Include Library → Manage Libraries**. In the Library Manager search bar, install the following libraries:
+
+    - **HX711** by Bogdan Necula — provides the load cell interface
+    - **Encoder** by Paul Stoffregen — handles quadrature decoding for the rotary encoder
+
+    Wait for each installation to complete before closing the Library Manager.
+  </Step>
+
+  <Step title="Clone the OpenDoorsim Repository">
+    Open a terminal and clone the OpenDoorsim source repository to your local machine:
+
+    ```bash
+    git clone https://github.com/shortrangetechnologies/opendoorsim.git
+    cd opendoorsim
+    ```
+
+    The repository contains the Arduino firmware under `firmware/`, the companion desktop application under `app/`, pre-built installers under `releases/`, and configuration documentation in the `docs/` folder.
+  </Step>
+
+  <Step title="Flash the Firmware">
+    In the Arduino IDE, open the firmware sketch:
+
+    ```
+    firmware/opendoorsim_firmware.ino
+    ```
+
+    Connect your Arduino Uno to the computer via USB. In the IDE:
+
+    1. Go to **Tools → Board** and select **Arduino Uno**
+    2. Go to **Tools → Port** and select the COM port that corresponds to your Arduino (e.g., `COM3` on Windows or `/dev/ttyUSB0` on Linux)
+    3. Click the **Upload** button (right-arrow icon)
+
+    The IDE will compile and flash the firmware. Wait for the "Done uploading" confirmation message in the status bar before disconnecting.
+  </Step>
+
+  <Step title="Install the Companion App">
+    Navigate to the `releases/` folder in the cloned repository and run the installer for your operating system:
+
+    - **Windows**: `OpenDoorsim-Setup-x.x.x.exe`
+    - **macOS**: `OpenDoorsim-x.x.x.dmg`
+    - **Linux**: `opendoorsim_x.x.x_amd64.deb` or the AppImage
+
+    Alternatively, follow the build instructions in the repository `README.md` to compile the companion app from source if you need a custom configuration.
+  </Step>
+
+  <Step title="Connect and Launch">
+    With the Arduino still connected via USB, launch the **OpenDoorsim companion app**. On the connection screen, select the correct **COM port** from the dropdown (the same port used during firmware upload) and click **Connect**. The status indicator should turn green and live sensor data will begin populating the dashboard.
+  </Step>
+
+  <Step title="Calibrate Sensors">
+    Follow the on-screen **Calibration Wizard**, which guides you through two calibration procedures:
+
+    1. **Zero the load cell** — with nothing pressing on the door handle, click *Tare* to set the zero-force baseline
+    2. **Set open/closed reference points** — manually move the door to the fully open position and click *Set Open*, then close the door fully and click *Set Closed*
+
+    The wizard will confirm each step and save the calibration values to the Arduino's EEPROM. Calibration only needs to be repeated if sensors are remounted or replaced.
+  </Step>
+</Steps>
+
+<Tip>
+  If the companion app doesn't detect the Arduino on launch, try a **different USB cable or port** on your computer. Some USB hubs and charge-only cables do not support data transfer. A direct connection to a port on the back of a desktop or side of a laptop is most reliable.
+</Tip>
+
+<Note>
+  For advanced configuration options — including sensor smoothing filters, data logging intervals, and custom output formats — see the [Configuration Reference](/opendoorsim/user-manuals/configuration).
+</Note>

@@ -1,0 +1,51 @@
+---
+title: "OpenDoorsim: Open-Source Door Simulator Project"
+sidebarTitle: "Introduction"
+description: "OpenDoorsim is an open-source door simulator for builders and hobbyists — ideal for training, game interfaces, and accessibility research."
+---
+
+OpenDoorsim is an open-source project that lets you build a fully functional, physical door simulation rig from scratch. Whether you're prototyping an accessibility aid, crafting an immersive game controller, or running training scenarios, OpenDoorsim gives you a reproducible, hackable platform to work from — no proprietary hardware or closed-source firmware required.
+
+## What is OpenDoorsim?
+
+OpenDoorsim is a modular, open-source hardware and software project designed to replicate the mechanics and feedback of a real door in a controlled, reconfigurable way. The project is split into three interlocking layers:
+
+- **Mechanical frame** — A sturdy, dimension-accurate door frame and leaf assembly built from readily available materials. CAD files are published under an open hardware licence so you can fabricate or modify every component.
+- **Electronics & sensors** — An Arduino-compatible controller board paired with position encoders, force sensors, and optional actuators. All schematics and PCB layouts are included in the repository.
+- **Companion software** — A cross-platform desktop application (Linux, Windows, macOS) that reads live sensor data, drives actuators, logs sessions, and exposes a WebSocket API for integration with games, accessibility tools, or research pipelines.
+
+Every layer is designed to be swapped, extended, or replaced independently — change the frame dimensions, drop in a different microcontroller, or write your own software client against the published API.
+
+## Key Features
+
+<CardGroup cols={2}>
+  <Card title="Open Hardware Design" icon="screwdriver-wrench">
+    Full CAD files, schematics, and PCB layouts released under open licences. Fabricate, modify, and redistribute every physical component.
+  </Card>
+  <Card title="Modular Assembly" icon="cubes">
+    Frame, electronics, and software are decoupled layers. Upgrade or replace any one of them without rebuilding the whole rig.
+  </Card>
+  <Card title="Companion Software" icon="laptop">
+    A cross-platform desktop app with live sensor dashboards, session logging, actuator control, and a WebSocket API for third-party integrations.
+  </Card>
+  <Card title="Community-Driven" icon="people-group">
+    Maintained by contributors worldwide. Issues, pull requests, and design discussions happen openly on GitHub — everyone is welcome.
+  </Card>
+</CardGroup>
+
+## Who It's For
+
+OpenDoorsim is built for anyone who needs a realistic, programmable door in their workflow:
+
+- **Hobbyists & makers** who want a satisfying weekend build with real-world sensor data to play with.
+- **Accessibility researchers** studying door-opening ergonomics, assistive device prototyping, or inclusive design validation.
+- **Game developers** looking for a physical input device that maps naturally to in-game door interactions.
+- **Escape room designers** who want a scriptable, resettable prop that can be monitored and triggered remotely.
+
+If you can turn a screwdriver and run a terminal, you have everything you need to get started.
+
+---
+
+<Card href="/opendoorsim/getting-started" icon="rocket">
+  Get Started
+</Card>

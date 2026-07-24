@@ -1,0 +1,68 @@
+---
+title: "Contribute to OpenDoorsim: How to Get Involved"
+sidebarTitle: "Contributing"
+description: "Learn how to contribute hardware designs, firmware patches, documentation fixes, and bug reports to the OpenDoorsim open-source project."
+---
+
+OpenDoorsim is a community-driven open-source project and contributions of all kinds are welcome — hardware improvements, firmware patches, documentation fixes, and bug reports. Whether you're an embedded systems engineer, a mechanical designer, or a first-time open-source contributor, there's a meaningful way to get involved.
+
+## Ways to Contribute
+
+<CardGroup cols={2}>
+  <Card title="Report a Bug" icon="bug">
+    Open a GitHub Issue with clear reproduction steps, your hardware revision, and firmware version so maintainers can investigate quickly.
+  </Card>
+  <Card title="Suggest a Feature" icon="lightbulb">
+    Open a GitHub Discussion or Issue with your proposal. Describe the problem it solves and any implementation ideas you have in mind.
+  </Card>
+  <Card title="Submit a Pull Request" icon="code-pull-request">
+    Fork the repo, make your changes on a dedicated branch, and open a PR against `main`. See the workflow below for step-by-step guidance.
+  </Card>
+  <Card title="Improve Docs" icon="pen-to-square">
+    Fix typos, clarify confusing steps, or add missing content. Documentation improvements are just as valuable as code changes.
+  </Card>
+</CardGroup>
+
+## Pull Request Workflow
+
+<Steps>
+  <Step title="Fork the repository on GitHub">
+    Navigate to the [OpenDoorsim repository](https://github.com/opendoorsim/opendoorsim) and click **Fork** to create your own copy under your GitHub account.
+  </Step>
+  <Step title="Clone your fork locally">
+    ```bash
+    git clone https://github.com/YOUR_USERNAME/opendoorsim.git
+    cd opendoorsim
+    ```
+  </Step>
+  <Step title="Create a feature branch">
+    ```bash
+    git checkout -b feature/my-improvement
+    ```
+    Use a short, descriptive branch name that reflects what your change does.
+  </Step>
+  <Step title="Make your changes and commit">
+    Implement your fix or feature, then commit with a clear and descriptive message that explains *what* changed and *why*.
+  </Step>
+  <Step title="Push to your fork and open a Pull Request">
+    Push your branch to your fork and open a Pull Request against the `main` branch of the upstream repository. Fill out the PR template and include any relevant context, screenshots, or test results.
+  </Step>
+  <Step title="Await review and feedback">
+    A maintainer will review your PR and may request changes or ask clarifying questions. Respond to feedback and push any requested updates to the same branch.
+  </Step>
+</Steps>
+
+## Contribution Guidelines
+
+Keep these principles in mind when preparing a contribution:
+
+- **Keep pull requests focused** — submit one feature or fix per PR to make review faster and easier.
+- **Include photos or video for hardware changes** — visual evidence helps reviewers verify physical modifications and manufacturing considerations.
+- **Update documentation if your change affects user-facing behavior** — if a user would need to know about it, document it.
+- **Follow existing code style for firmware changes** — consistency makes the codebase easier to read and maintain for everyone.
+
+## Code of Conduct
+
+<Note>
+  OpenDoorsim follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/). Be respectful and constructive in all interactions — across Issues, Pull Requests, Discussions, and any other project spaces.
+</Note>

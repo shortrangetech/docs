@@ -1,0 +1,49 @@
+---
+title: "OpenDoorsim FAQ: Frequently Asked Questions"
+sidebarTitle: "FAQ"
+description: "Answers to the most commonly asked questions about building, configuring, and using OpenDoorsim from new and experienced builders."
+---
+
+This FAQ answers the most common questions from new and experienced OpenDoorsim builders and users. If your question isn't answered here, check the [Troubleshooting guide](/opendoorsim/user-manuals/troubleshooting) or open a GitHub Issue.
+
+<AccordionGroup>
+  <Accordion title="What is OpenDoorsim used for?">
+    OpenDoorsim is used for testing door mechanics, measuring accessibility compliance (force, speed, closure), UX research, escape room prop development, and hobbyist builds.
+  </Accordion>
+
+  <Accordion title="Do I need programming experience to build OpenDoorsim?">
+    Basic experience is helpful but not required. The firmware is pre-written; you only need to upload it to the Arduino. The companion app is a standard desktop installer.
+  </Accordion>
+
+  <Accordion title="What operating systems does the companion app support?">
+    The companion app supports Windows 10+, macOS 12+, and Ubuntu 20.04+.
+  </Accordion>
+
+  <Accordion title="Can I use a different microcontroller?">
+    The firmware is designed for Arduino Uno-compatible boards. Other AVR-based Arduinos (Mega, Nano) may work with minor pin remapping, but are not officially tested.
+  </Accordion>
+
+  <Accordion title="How accurate are the sensor readings?">
+    The rotary encoder provides ~0.6° resolution at 600 PPR. The load cell with HX711 provides ~1g resolution after calibration. Reed switches provide binary open/closed state.
+  </Accordion>
+
+  <Accordion title="Is the design metric or imperial?">
+    The default frame dimensions use imperial (inches/feet) to match standard lumber sizes. Sensor specs use metric (mm, kg, Hz).
+  </Accordion>
+
+  <Accordion title="How do I report a bug or request a feature?">
+    Open a GitHub Issue at the OpenDoorsim repository. See the [Contributing guide](/opendoorsim/contributing) for more detail on how to submit reports and feature requests.
+  </Accordion>
+
+  <Accordion title="Can I use OpenDoorsim commercially?">
+    Check the project license on GitHub. Generally, open-source hardware licenses permit commercial use with attribution.
+  </Accordion>
+
+  <Accordion title="How do I calibrate the load cell?">
+    Use the calibration wizard in the companion app (**Settings → Calibrate Sensors**). Place a known weight on the door handle area and follow the on-screen prompts.
+  </Accordion>
+
+  <Accordion title="Where can I get support?">
+    Check the [Troubleshooting guide](/opendoorsim/user-manuals/troubleshooting) first, then open a GitHub Issue or join the GitHub Discussions forum.
+  </Accordion>
+</AccordionGroup>

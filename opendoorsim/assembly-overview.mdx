@@ -1,0 +1,54 @@
+---
+title: "OpenDoorsim Assembly Overview: Build Sequence Guide"
+sidebarTitle: "Assembly Overview"
+description: "High-level walkthrough of the three OpenDoorsim assembly phases: frame construction, electronics wiring, and software setup and sensor calibration."
+---
+
+Building an OpenDoorsim rig follows three sequential phases that build on one another. You begin with a physical wooden frame and door, then layer in the sensor electronics, and finally install firmware to bring everything to life. Completing the phases in order ensures each layer has a stable foundation before the next is added.
+
+<CardGroup cols={3}>
+  <Card title="Phase 1: Frame Construction" href="/opendoorsim/build-guides/frame">
+    Build the freestanding wooden frame, hang the door, and secure the assembly to the base plate.
+  </Card>
+  <Card title="Phase 2: Electronics Wiring" href="/opendoorsim/build-guides/electronics">
+    Mount sensors to the door and frame, then wire all components through to the microcontroller.
+  </Card>
+  <Card title="Phase 3: Software Setup" href="/opendoorsim/build-guides/software-setup">
+    Install firmware onto the microcontroller, connect to your PC, and calibrate all sensors.
+  </Card>
+</CardGroup>
+
+## Phase Summaries
+
+**Phase 1 — Frame Construction:** Cut and assemble the 2x4 lumber into a freestanding door frame, attach the base plate for stability, and hang the hollow-core door panel on its ball-bearing hinges. Finish by fitting the latch set and verifying the door swings freely through its full range of motion.
+
+**Phase 2 — Electronics Wiring:** With the frame complete, mount the Hall effect sensors, reed switches, rotary encoder, and force/load sensor at their designated positions on the door and frame. Route all wiring neatly using cable ties and connect each component to the Arduino Uno breadboard circuit according to the wiring diagram in the [Electronics guide](/opendoorsim/build-guides/electronics).
+
+**Phase 3 — Software Setup:** Flash the OpenDoorsim firmware to the Arduino via USB, then open the companion desktop application on your laptop. Follow the on-screen calibration wizard to zero the load sensor, verify encoder direction, and confirm reed switch state transitions. Once calibration passes all checks, the rig is ready for use.
+
+## Tools Required
+
+- Hand saw (or miter saw)
+- Drill / driver with bit set
+- Tape measure
+- Wire stripper
+- Soldering iron and solder
+- Multimeter
+- Laptop (for firmware flashing and calibration)
+
+## Safety Notes
+
+<Warning>
+  **Eye protection is required when cutting lumber.** Flying sawdust and wood chips pose a serious eye hazard — always wear safety glasses or goggles before making any cuts.
+
+  **Disconnect all power before soldering or modifying wiring.** Unplug the 9V adapter and remove the USB cable from the Arduino any time you are making or changing electrical connections. Never solder live circuits.
+</Warning>
+
+## Estimated Build Time
+
+| Builder Experience | Estimated Time |
+|--------------------|---------------|
+| Experienced builder | ~4–6 hours |
+| First-time builder | ~8–12 hours |
+
+Take your time during Phase 2 — careful sensor placement and tidy wiring will save significant troubleshooting effort later.

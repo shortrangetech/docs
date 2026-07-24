@@ -1,0 +1,40 @@
+---
+title: "Get Started with OpenDoorsim: Build Your First Rig"
+sidebarTitle: "Getting Started"
+description: "Follow the quickstart path from reviewing the bill of materials to running your first door simulation — get your rig up in a single session."
+---
+
+This guide walks you through everything you need to go from an empty workbench to a fully operational OpenDoorsim rig. You'll source the parts, assemble the mechanical frame, wire the electronics, install the companion software, and run your first live simulation — all in a logical, dependency-ordered sequence so nothing catches you off-guard mid-build.
+
+## Prerequisites
+
+Before you begin, make sure you have the following on hand:
+
+- **Basic hand tools** — screwdrivers (Phillips and flathead), hex/Allen keys, a tape measure, and a utility knife.
+- **Soldering iron** — a temperature-controlled iron (around 350 °C / 660 °F) and solder. A third-hand tool or PCB vice is strongly recommended.
+- **A PC running Linux, Windows, or macOS** — needed to flash the microcontroller firmware and run the companion software.
+- **Git installed** — used to clone the repository and keep your local copy up to date. Install it from [git-scm.com](https://git-scm.com) if it isn't already present.
+
+## Build Steps
+
+<Steps>
+  <Step title="Review the Bill of Materials">
+    Start by reading through the full [Bill of Materials](/opendoorsim/bill-of-materials) before ordering anything. The BOM lists every mechanical component, electronic part, and fastener with suggested suppliers and substitution notes. Confirm you can source everything locally or adjust the alternatives section for your region before committing to a purchase.
+  </Step>
+  <Step title="Assemble the Frame">
+    Follow the [Frame Assembly Guide](/opendoorsim/build-guides/frame) to cut, drill, and bolt together the mechanical door frame and leaf. The guide includes annotated diagrams for each sub-assembly stage. Take your time with squaring the frame — a true 90° corner here saves significant calibration effort later.
+  </Step>
+  <Step title="Wire the Electronics">
+    With the frame complete, work through the [Electronics Wiring Guide](/opendoorsim/build-guides/electronics) to mount the controller board, connect the position encoders and force sensors, and route cabling through the frame. All connector pinouts and wire-colour conventions are documented in the schematic included in the guide.
+  </Step>
+  <Step title="Install and Configure Software">
+    Follow the [Software Setup Guide](/opendoorsim/build-guides/software-setup) to clone the companion software repository, install dependencies, flash the microcontroller firmware, and configure the application for your sensor layout. The guide covers all three supported operating systems and includes troubleshooting steps for common USB/serial issues.
+  </Step>
+  <Step title="Run Your First Simulation">
+    Launch the companion application and select **File → New Session**. The live sensor dashboard should immediately display readings from your encoders and force sensors. Open and close the door by hand — you'll see angle and force values update in real time. Press **Record** to log a session, then **Playback** to review it. Congratulations: your OpenDoorsim rig is operational.
+  </Step>
+</Steps>
+
+<Note>
+  OpenDoorsim is a community-maintained project. If you spot an error in the docs, want to improve a build guide, or have hardware changes to contribute, please read the [Contributing Guide](https://github.com/shortrange-tech/opendoorsim/blob/main/CONTRIBUTING.md) before opening a pull request — it covers branch conventions, hardware submission standards, and the review process.
+</Note>
