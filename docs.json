@@ -22,22 +22,8 @@
             "pages": [
               "opendoorsim/introduction",
               "opendoorsim/getting-started"
-            ]
-          },
-          {
-            "group": "Hardware",
-            "pages": [
-              "opendoorsim/bill-of-materials",
-              "opendoorsim/assembly-overview"
-            ]
-          },
-          {
-            "group": "Build Guides",
-            "pages": [
-              "opendoorsim/build-guides/board",
-              "opendoorsim/build-guides/electronics",
-              "opendoorsim/build-guides/software-setup"
-            ]
+            ],
+            "icon": "planet-ringed"
           },
           {
             "group": "User Manuals",
@@ -45,6 +31,35 @@
               "opendoorsim/user-manuals/operating-guide",
               "opendoorsim/user-manuals/configuration",
               "opendoorsim/user-manuals/troubleshooting"
+            ],
+            "icon": "book-open"
+          },
+          {
+            "group": "Build Guides",
+            "icon": "hammer",
+            "pages": [
+              "opendoorsim/build-guides/open-door-sim-board",
+              "opendoorsim/build-guides/lab-case"
+            ]
+          },
+          {
+            "group": "Self Manufacture",
+            "icon": "industry-windows",
+            "pages": [
+              {
+                "group": "OpenDoorSim Board",
+                "pages": [
+                  "opendoorsim/bill-of-materials",
+                  "opendoorsim/board-manufacturing-guide"
+                ]
+              },
+              {
+                "group": "LAB Case",
+                "pages": [
+                  "bill-of-materials",
+                  "3-d-print-guide"
+                ]
+              }
             ]
           },
           {
