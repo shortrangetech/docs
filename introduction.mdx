@@ -1,3 +1,23 @@
 ---
 title: "Introduction"
 ---
+
+## Self-Manufacture Build Steps
+
+<Steps>
+  <Step title="Review the Bill of Materials">
+    Start by reading through the full [Bill of Materials](/opendoorsim/bill-of-materials) before ordering anything. The BOM lists every mechanical component, electronic part, and fastener with suggested suppliers and substitution notes. Confirm you can source everything locally or adjust the alternatives section for your region before committing to a purchase.
+  </Step>
+  <Step title="Assemble the Frame">
+    Follow the [Frame Assembly Guide](/opendoorsim/build-guides/frame) to cut, drill, and bolt together the mechanical door frame and leaf. The guide includes annotated diagrams for each sub-assembly stage. Take your time with squaring the frame — a true 90° corner here saves significant calibration effort later.
+  </Step>
+  <Step title="Wire the Electronics">
+    With the frame complete, work through the [Electronics Wiring Guide](/opendoorsim/build-guides/electronics) to mount the controller board, connect the position encoders and force sensors, and route cabling through the frame. All connector pinouts and wire-colour conventions are documented in the schematic included in the guide.
+  </Step>
+  <Step title="Install and Configure Software">
+    Follow the [Software Setup Guide](/opendoorsim/build-guides/software-setup) to clone the companion software repository, install dependencies, flash the microcontroller firmware, and configure the application for your sensor layout. The guide covers all three supported operating systems and includes troubleshooting steps for common USB/serial issues.
+  </Step>
+  <Step title="Run Your First Simulation">
+    Launch the companion application and select **File → New Session**. The live sensor dashboard should immediately display readings from your encoders and force sensors. Open and close the door by hand — you'll see angle and force values update in real time. Press **Record** to log a session, then **Playback** to review it. Congratulations: your OpenDoorsim rig is operational.
+  </Step>
+</Steps>
