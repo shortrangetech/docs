@@ -1,52 +1,53 @@
 ---
-title: "OpenDoorSim: Your Personal RFID Lab!"
+title: "Introduction to OpenDoorSim"
 sidebarTitle: "Introduction"
-description: "OpenDoorSim is **your personal open-source PACS and RFID lab!** OpenDoorSim simulates Physical Access Control Systems (PACS) by connecting to real readers, so you can **hack the real thing!** At-home experiments, big CTFs, hands-on workshops, banger demos and advanced research are a breeze! It works with **any Wiegand or (soon) OSDP reader**, and fits easily in your bag. Sporting a fresh web UI with a mirrored virtual display, an on-device hardware menu, and multiple modes to make life easy, you may find it hard to put down..."
+description: "OpenDoorSim is your very own RFID Lab! Plug in a reader and go. Scan. Decode. Research. Practice. Demo. Any wiegand or (soon) OSDP reader!"
 ---
 
 ## What is OpenDoorsim?
 
-OpenDoorsim is a modular, open-source hardware and software project designed to replicate the mechanics and feedback of a real door in a controlled, reconfigurable way. The project is split into three interlocking layers:
+OpenDoorSim (ODS) is a personal, open-source PACS and RFID lab designed for ease of use and wide compatability. It simulates Physical Access Control Systems (PACS) by connecting to real readers, so you can hack (or defend) the real thing!
 
-- **Mechanical frame** — A sturdy, dimension-accurate door frame and leaf assembly built from readily available materials. CAD files are published under an open hardware licence so you can fabricate or modify every component.
-- **Electronics & sensors** — An Arduino-compatible controller board paired with position encoders, force sensors, and optional actuators. All schematics and PCB layouts are included in the repository.
-- **Companion software** — A cross-platform desktop application (Linux, Windows, macOS) that reads live sensor data, drives actuators, logs sessions, and exposes a WebSocket API for integration with games, accessibility tools, or research pipelines.
-
-Every layer is designed to be swapped, extended, or replaced independently — change the frame dimensions, drop in a different microcontroller, or write your own software client against the published API.
+With ODS, at-home experiments, big CTFs, hands-on workshops, banger demos and advanced research are a breeze. It works with any Wiegand or (soon) OSDP reader, and fits easily in your bag. Sporting a fresh web UI with a mirrored virtual display, an on-device hardware menu, and multiple modes to make life easy, you may find it hard to put down...
 
 ## Key Features
 
 <CardGroup cols={2}>
+  <Card title="Easy To Use" icon="rocket-launch" href="/opendoorsim/build-guides/software-setup">
+    The world's friendliest RFID lab is a breeze to use — run CTFs, demos, research, workshops, and more via hardware or web interfaces! All you need to start is the board!
+  </Card>
+
+  <Card title="Multi Mode" icon="magnifying-glass-waveform" href="/opendoorsim/contributing">
+    Investigate binary messages in RAW mode. Or, switch to USER mode to manage, grant and deny access to specific credentials. Want to go stealth? We've got settings for that too.
+  </Card>
+
   <Card title="Open Hardware Design" icon="screwdriver-wrench" href="/opendoorsim/bill-of-materials">
-    Full CAD files, schematics, and PCB layouts released under open licences. Fabricate, modify, and redistribute every physical component.
+    Schematics, 3D Print STLs, Gerbers, and more released under open licences. Fabricate, modify, and iterate to your heart's content. Create your own modules for the integrated module slots!
+  </Card>
+
+  <Card title="Open Source and Community Driven" icon="people-group" href="/opendoorsim/contributing">
+    Created and maintained by a worldwide community. We are always looking to improve and develop the project. Updates, issues, and feature requests happen all on GitHub.
   </Card>
 
   <Card title="Modular Assembly" icon="cubes" href="/opendoorsim/assembly-overview">
-    Frame, electronics, and software are decoupled layers. Upgrade or replace any one of them without rebuilding the whole rig.
+    Frame, electronics, and software are decoupled layers.  Upgrade or replace without rebuilding the whole rig. Parts are easy to source — either buy off the shelf or manufacture them yourself!
   </Card>
 
-  <Card title="Companion Software" icon="laptop" href="/opendoorsim/build-guides/software-setup">
-    A cross-platform desktop app with live sensor dashboards, session logging, actuator control, and a WebSocket API for third-party integrations.
-  </Card>
-
-  <Card title="Community-Driven" icon="people-group" href="/opendoorsim/contributing">
-    Maintained by contributors worldwide. Issues, pull requests, and design discussions happen openly on GitHub — everyone is welcome.
+  <Card title="Support The Community " icon="heart" href="/opendoorsim/contributing">
+    Created and maintained by a worldwide community. We are always looking to improve and develop the project. Updates, issues, and feature requests happen all on GitHub.
   </Card>
 </CardGroup>
 
 ## Who It's For
 
-OpenDoorsim is built for anyone who needs a realistic, programmable door in their workflow:
+OpenDoorsim is built for anyone who needs an RFID / PACS lab:
 
-- **Hobbyists & makers** who want a satisfying weekend build with real-world sensor data to play with.
-- **Accessibility researchers** studying door-opening ergonomics, assistive device prototyping, or inclusive design validation.
-- **Game developers** looking for a physical input device that maps naturally to in-game door interactions.
-- **Escape room designers** who want a scriptable, resettable prop that can be monitored and triggered remotely.
+- **Vulnerability Researchers** who want a quick and easy way to set up, research, and demo their findings.
+- **Students** looking to learn about RFID, card and reader vulnerabilities, and physical security.
+- **CTF Organizers** who want a turnkey, interactive solution for RFID / PACS challenges.
+- **Industry Professionals** who want to test equipment, validate configurations, and demo their RFID cards and readers, .
+- **Hobbyists & Makers** who want a satisfying weekend build that interacts with real world RFID hardware.
 
-If you can turn a screwdriver and run a terminal, you have everything you need to get started.
+If you can turn a screwdriver, use a soldering iron, and run a terminal, you have everything you need to get started!
 
 ---
-
-<Card icon="rocket" href="/opendoorsim/getting-started">
-  Get Started
-</Card>
