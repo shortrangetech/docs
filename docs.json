@@ -26,22 +26,22 @@
             "icon": "planet-ringed"
           },
           {
-            "group": "User Manuals",
-            "pages": [
-              "opendoorsim/user-manuals/operating-guide",
-              "opendoorsim/user-manuals/configuration",
-              "opendoorsim/user-manuals/flashing-firmware",
-              "opendoorsim/user-manuals/troubleshooting"
-            ],
-            "icon": "book-open"
-          },
-          {
             "group": "Build Guides",
             "icon": "hammer",
             "pages": [
               "opendoorsim/build-guides/open-door-sim-board",
               "opendoorsim/build-guides/screen-and-encoder",
               "opendoorsim/build-guides/lab-case"
+            ]
+          },
+          {
+            "group": "User Manuals",
+            "icon": "book-open",
+            "pages": [
+              "opendoorsim/user-manuals/operating-guide",
+              "opendoorsim/user-manuals/configuration",
+              "opendoorsim/user-manuals/flashing-firmware",
+              "opendoorsim/user-manuals/troubleshooting"
             ]
           },
           {
