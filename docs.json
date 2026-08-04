@@ -3,11 +3,14 @@
   "theme": "mint",
   "name": "Shortrange.tech Docs Site",
   "colors": {
-    "primary": "#ef7025",
-    "light": "#eec9bc",
-    "dark": "#4fa1ab"
+    "primary": "#fab800",
+    "light": "#ffc933",
+    "dark": "#f3b200"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/android-chrome-512x512.png",
+    "dark": "/images/android-chrome-512x512.png"
+  },
   "logo": {
     "light": "/images/light-docs-logo.png",
     "dark": "/images/docs-logo-dark.png"
@@ -114,9 +117,22 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Store",
+          "anchor": "Buy An Official Kit",
           "icon": "store",
-          "href": "https://shortrange.tech"
+          "href": "https://shortrange.tech",
+          "color": {
+            "light": "#fab800",
+            "dark": "#fab800"
+          }
+        },
+        {
+          "anchor": "GitHub Repository",
+          "icon": "code",
+          "color": {
+            "light": "#fab800",
+            "dark": "#fab800"
+          },
+          "href": "https://github.com/shortrangetech/opendoorsim"
         }
       ]
     }
@@ -146,5 +162,8 @@
   },
   "appearance": {
     "default": "dark"
+  },
+  "background": {
+    "decoration": "grid"
   }
 }
