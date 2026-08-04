@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Shortrange.tech Docs",
+  "name": "Shortrange.tech Docs Site",
   "colors": {
     "primary": "#ef7025",
     "light": "#eec9bc",
@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/shortrange-tech-docs-logo-light(1).png",
+    "dark": "/images/shortrange-tech-docs-logo-dark.png"
   },
   "navigation": {
     "tabs": [
@@ -73,8 +73,7 @@
             ]
           }
         ],
-        "icon": "binary",
-        "hidden": true
+        "icon": "binary"
       },
       {
         "tab": "Events & Talks",
@@ -117,7 +116,7 @@
     "links": [
       {
         "label": "GitHub",
-        "href": "https://github.com/shortrangetechnologies"
+        "href": "https://github.com/shortrangetech"
       }
     ],
     "primary": {
@@ -127,7 +126,7 @@
   },
   "footer": {
     "socials": {
-      "github": "https://github.com/shortrangetechnologies",
+      "github": "https://github.com/shortrangetech",
       "linkedin": "https://www.linkedin.com/in/shortrange",
       "youtube": "https://www.youtube.com/@ShortrangeTech",
       "website": "https://shortrange.tech"
