@@ -55,7 +55,6 @@
               {
                 "group": "OpenDoorSim Board",
                 "pages": [
-                  "opendoorsim/bill-of-materials",
                   "opendoorsim/board-manufacturing-guide",
                   "opendoorsim/build-guides/open-door-sim-board"
                 ]
@@ -63,13 +62,13 @@
               {
                 "group": "Screen and Encoder",
                 "pages": [
-                  "bill-of-materials-1"
+                  "bill-of-materials-screen-encoder"
                 ]
               },
               {
                 "group": "LAB Case",
                 "pages": [
-                  "bill-of-materials",
+                  "bill-of-materials-lab",
                   "3-d-print-guide"
                 ]
               }
