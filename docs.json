@@ -9,8 +9,8 @@
   },
   "favicon": "/favicon.svg",
   "logo": {
-    "light": "/images/shortrange-tech-docs-logo-light(1).png",
-    "dark": "/images/shortrange-tech-docs-logo-dark.png"
+    "light": "/images/light-docs-logo.png",
+    "dark": "/images/docs-logo-dark.png"
   },
   "navigation": {
     "tabs": [
