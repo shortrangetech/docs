@@ -142,6 +142,10 @@
       {
         "label": "GitHub",
         "href": "https://github.com/shortrangetech"
+      },
+      {
+        "href": "https://shortrange.tech",
+        "label": "Return to Shortrange.tech"
       }
     ],
     "primary": {
@@ -165,5 +169,6 @@
   },
   "background": {
     "decoration": "grid"
-  }
+  },
+  "description": "Shortrange.tech Docs Hub is the central documentation resource for the OpenDoorSim project and other RF learning resources. Whether you’re building your first OpenDoorSim, looking for Shortrange’s workshops and talks, past recordings, or just looking for a quick reference, you’ll find it all here."
 }
