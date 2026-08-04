@@ -25,6 +25,10 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
 
 ## Parts Needed
 
+<Card title="Pre-Built OpenDoorSim Board (For Wiring Reference)" icon="binary">
+  Either from the official kit or self-manufactured.
+</Card>
+
 <Card title="LAB Kit Screen and Encoder Parts" icon="box-alt" href="/bill-of-materials-screen-encoder">
   The kit comes with all parts needed for the following steps.
 
@@ -33,13 +37,39 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
 
 # Build Guide
 
+<Card title="Wiring Warning" type="warning">
+  Ensure you are wiring power and data correctly between your accessories and the ODS board. Use the board and the board only for reference. Because wire harnesses come in many different colors, you cannot 
+
+  Do not rely on wire color, images below, or anything else for making sure you wire your board and accessories correctly. You are responsible for ensuring that Power, Ground, and Data wires for accessory components run correctly when the JST connector is plugged in!
+</Card>
+
 <Steps>
-  <Step title="STEP ONE: SCREEN">
+  <Step title="STEP ONE: SCREEN" titleSize="h2">
     <Steps>
-      <Step title="Sold">
+      <Step title="Solder 4-PIN JST wire harness to OLED Screen" titleSize="h3">
+        <Tip>
+          TIP: Plugging in the JST side of your connector will allow you to confidently route / solder your wire to the screen. Make sure the four wires are connecting as indicated in the table below:
+        </Tip>
+
+        | ODS BOARD |  | SCREEN |
+        | --- | --- | --- |
+        | GND | ←→ | GND |
+        | \+3V | ←→ | VDD / VCC / POWER |
+        | SCL | ←→ | SCL |
+        | SDA | ←→ | SDA |
+
+        <Columns cols={2}>
+          <Column>
+            <Frame>
+              ![IMG 5850](/images/IMG_5850.jpeg "IMG 5850")
+            </Frame>
+          </Column>
+          <Column>
+          </Column>
+        </Columns>
       </Step>
     </Steps>
   </Step>
-  <Step title="STEP TWO: ENCODER">
+  <Step title="STEP TWO: ENCODER" titleSize="h2">
   </Step>
 </Steps>
