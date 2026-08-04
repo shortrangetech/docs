@@ -1,58 +1,8 @@
 ---
-title: "OpenDoorsim Configuration: Settings & Profile Options"
+title: "OpenDoorSim Configuration"
 sidebarTitle: "Configuration"
-description: "Explore all OpenDoorsim companion app settings and config file options to tailor sensor behaviour, calibration, and session profiles."
 ---
 
-The OpenDoorsim companion app exposes a range of configuration options that control serial communication, sensor sampling, calibration, and session profiles. Most settings can be adjusted through the app's **Settings** panel, but they are all persisted in a plain-text `config.json` file that you can edit directly for advanced use cases or scripted deployments.
-
-## Config File Location
-
-The `config.json` file is stored in a platform-specific application data directory:
-
-- **Windows:** `%APPDATA%\OpenDoorsim\config.json`
-- **macOS:** `~/Library/Application Support/OpenDoorsim/config.json`
-- **Linux:** `~/.config/opendoorsim/config.json`
-
-### Example config.json
-
-```json config.json
-{
-  "serial_port": "COM3",
-  "baud_rate": 115200,
-  "sample_rate_hz": 50,
-  "load_cell_offset": 0,
-  "load_cell_scale": 2280.0,
-  "encoder_ppr": 600,
-  "profiles": [
-    {
-      "name": "Standard Door",
-      "max_force_kg": 22.0,
-      "close_timeout_s": 5
-    }
-  ],
-  "export_path": "~/Documents/OpenDoorsim/exports"
-}
-```
-
-## Configuration Options
-
-| Key | Type | Default | Description |
-|-----|------|---------|-------------|
-| `serial_port` | string | `auto` | COM port used to communicate with the Arduino |
-| `baud_rate` | integer | `115200` | Serial baud rate — must match the firmware setting |
-| `sample_rate_hz` | integer | `50` | Sensor polling rate in samples per second |
-| `load_cell_offset` | float | `0` | Zero offset applied to the raw load cell reading |
-| `load_cell_scale` | float | `2280.0` | Calibration scale factor for the load cell |
-| `encoder_ppr` | integer | `600` | Rotary encoder pulses per revolution |
-| `export_path` | string | `~/Documents` | Default directory for exported CSV and JSON session files |
-
-<Note>
-  After editing `config.json` manually, **restart the companion app** for the changes to take effect. Settings modified through the in-app Settings panel are saved and applied immediately without a restart.
-</Note>
-
-## Sensor Calibration
-
-Sensor calibration values — particularly `load_cell_offset` and `load_cell_scale` — should be set using the built-in **Calibration Wizard** rather than edited by hand. The wizard guides you through a known-weight calibration procedure and writes the resulting values directly to `config.json`.
-
-To run the Calibration Wizard, go to **Settings → Sensors → Run Calibration Wizard** in the companion app. For detailed instructions on the initial calibration setup, see the [Software Setup guide](/opendoorsim/build-guides/software-setup).
+<Info>
+  Coming Soon
+</Info>
