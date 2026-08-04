@@ -32,7 +32,6 @@
             "group": "Build Guides",
             "icon": "hammer",
             "pages": [
-              "opendoorsim/build-guides/open-door-sim-board",
               "opendoorsim/build-guides/screen-and-encoder",
               "opendoorsim/build-guides/lab-case"
             ]
@@ -57,7 +56,8 @@
                 "group": "OpenDoorSim Board",
                 "pages": [
                   "opendoorsim/bill-of-materials",
-                  "opendoorsim/board-manufacturing-guide"
+                  "opendoorsim/board-manufacturing-guide",
+                  "opendoorsim/build-guides/open-door-sim-board"
                 ]
               },
               {
