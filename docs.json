@@ -52,7 +52,7 @@
             "group": "Self Manufacture",
             "icon": "industry-windows",
             "pages": [
-              "introduction",
+              "self-manufacture-overview",
               {
                 "group": "OpenDoorSim Board",
                 "pages": [
