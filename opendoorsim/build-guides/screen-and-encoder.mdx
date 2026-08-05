@@ -47,7 +47,7 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
   <Step title="STEP ONE: SCREEN" icon="tv" titleSize="h2">
     <Steps>
       <Step title="Solder 4-PIN JST wire harness to OLED Screen" titleSize="h3">
-        Solder the 4 bare end wires of the JST harness into the OLED screen, following the connection table below. 
+        Solder the 4 bare end wires of the JST harness into the OLED screen, following the connection table below. Wires should go in from the underside of the screen.
 
         <Tip>
           TIP: Plugging the JST connector into the board will allow you to confidently route / solder your wire to the screen. Make sure the four wires are connecting as indicated in the table below:
@@ -73,13 +73,13 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
           </Column>
         </Columns>
       </Step>
-      <Step title="Trim Ends of 4-Pin Harness" titleSize="h3">
+      <Step title="Trim Excess Wire Beyond the Solder Blob" titleSize="h3">
         <Frame>
           ![IMG 5860](/images/IMG_5860.jpeg "IMG 5860")
         </Frame>
       </Step>
       <Step title="Plug 4-pin JST into ODS Board and Ensure That Wire Routing is Correct" titleSize="h3">
-        Ensure wire routing is correct, double checking with the table above.
+        Ensure wire routing for the screen is correct, double checking with the table above.
 
         <Columns cols={2}>
           <Column>
@@ -97,5 +97,92 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
     </Steps>
   </Step>
   <Step title="STEP TWO: ENCODER" icon="dial" titleSize="h2">
+    <Steps>
+      <Step title="Remove Pin Header From Encoder" titleSize="h3">
+        If your encoder includes pin headers, they must be removed.
+
+        First, bend the encoder pins straight(ish) so they are easier to remove, using pliers or cutters of your choice.
+
+        Next, heat each pin with a soldering iron, and use pliers / cutters to gently grip, wiggle, and pull them out one by one.
+
+        <Columns cols={3}>
+          <Column>
+            <Frame>
+              ![IMG 5865](/images/IMG_5865.jpeg "IMG 5865")
+            </Frame>
+          </Column>
+          <Column>
+            <Frame>
+              ![IMG 5870](/images/IMG_5870.jpeg "IMG 5870")
+            </Frame>
+          </Column>
+          <Column>
+            <Frame>
+              ![IMG 5873](/images/IMG_5873.jpeg "IMG 5873")
+            </Frame>
+          </Column>
+        </Columns>
+
+        <Columns cols={2}>
+          <Column>
+            After removing, some solder may remain, but the pins and plastic pin header should be gone to make room for the wires.
+          </Column>
+          <Column>
+            <Frame>
+              ![IMG 5877](/images/IMG_5877.jpeg "IMG 5877")
+            </Frame>
+          </Column>
+        </Columns>
+      </Step>
+      <Step title="Solder 5-PIN JST wire harness to Encoder" titleSize="h3">
+        Solder the 5 bare end wires of the JST harness into the encoder, following the connection table below. Wires should go in from the underside of the encoder.
+
+        <Tip>
+          TIP: Plugging the JST connector into the board will allow you to confidently route / solder your wire to the screen. Make sure the four wires are connecting as indicated in the table below:
+        </Tip>
+
+        | ODS BOARD | wire | ENCODER |
+        | --- | --- | --- |
+        | CLK | ←→ | CLK |
+        | DT | ←→ | DT |
+        | SW | ←→ | SW |
+        | \+3.3V / \+3V | ←→ | \+ |
+        | GND | ←→ | GND |
+
+        <Columns cols={2}>
+          <Column>
+            <Frame>
+              ![IMG 5878](/images/IMG_5878.jpeg "IMG 5878")
+            </Frame>
+          </Column>
+          <Column>
+            <Frame>
+              ![IMG 5881](/images/IMG_5881.jpeg "IMG 5881")
+            </Frame>
+          </Column>
+        </Columns>
+      </Step>
+      <Step title="Trim Down Solder Points" titleSize="h3">
+        <Frame>
+          ![IMG 5890](/images/IMG_5890.jpeg "IMG 5890")
+        </Frame>
+      </Step>
+      <Step title="Plug 5-pin JST into ODS Board and Ensure That Wire Routing is Correct" titleSize="h3">
+        Ensure wire routing for the encoder is correct, double checking with the table above.
+
+        <Columns cols={2}>
+          <Column>
+            <Frame>
+              ![IMG 5883](/images/IMG_5883.jpeg "IMG 5883")
+            </Frame>
+          </Column>
+          <Column>
+            <Frame>
+              ![IMG 5884](/images/IMG_5884.jpeg "IMG 5884")
+            </Frame>
+          </Column>
+        </Columns>
+      </Step>
+    </Steps>
   </Step>
 </Steps>
