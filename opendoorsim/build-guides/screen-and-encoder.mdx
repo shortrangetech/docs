@@ -38,9 +38,9 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
 # Build Guide
 
 <Card title="Wiring Warning" type="warning">
-  Ensure you are wiring power and data correctly between your accessories and the ODS board. Use the board and the board only for reference. Because wire harnesses come in many different colors, you cannot 
+  Ensure you are wiring power and data correctly between your accessories and the ODS board.  Because wire harnesses come in many different colors (even in the official kits!), it is unwise to completely rely on the colors you see in the photos below for correct routing.
 
-  Do not rely on wire color, images below, or anything else for making sure you wire your board and accessories correctly. You are responsible for ensuring that Power, Ground, and Data wires for accessory components run correctly when the JST connector is plugged in!
+  Use the board, accessories, and wires you have on hand for reference — only you can make sure you are routing them correctly.
 </Card>
 
 <Steps>
@@ -50,10 +50,10 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
         Solder the 4 bare end wires of the JST harness into the OLED screen, following the connection table below. 
 
         <Tip>
-          TIP: Plugging in the JST side of your connector will allow you to confidently route / solder your wire to the screen. Make sure the four wires are connecting as indicated in the table below:
+          TIP: Plugging the JST connector into the board will allow you to confidently route / solder your wire to the screen. Make sure the four wires are connecting as indicated in the table below:
         </Tip>
 
-        | ODS BOARD |  | SCREEN |
+        | ODS BOARD | wire | SCREEN |
         | --- | --- | --- |
         | GND | ←→ | GND |
         | \+3V | ←→ | VDD / VCC / POWER |
@@ -78,7 +78,21 @@ Build the screen and encoder accessories for use with the ODS Board in or out of
           ![IMG 5860](/images/IMG_5860.jpeg "IMG 5860")
         </Frame>
       </Step>
-      <Step title="Plug in to ODS Board and Ensure That Wire Routing is Correct!" titleSize="h3">
+      <Step title="Plug 4-pin JST into ODS Board and Ensure That Wire Routing is Correct" titleSize="h3">
+        Ensure wire routing is correct, double checking with the table above.
+
+        <Columns cols={2}>
+          <Column>
+            <Frame>
+              ![IMG 5856 1](/images/IMG_5856-1.jpeg "IMG 5856 1")
+            </Frame>
+          </Column>
+          <Column>
+            <Frame>
+              ![IMG 5857](/images/IMG_5857.jpeg "IMG 5857")
+            </Frame>
+          </Column>
+        </Columns>
       </Step>
     </Steps>
   </Step>
