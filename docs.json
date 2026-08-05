@@ -8,8 +8,8 @@
     "dark": "#f3b200"
   },
   "favicon": {
-    "light": "/images/docs_icon(2).png",
-    "dark": "/images/docs_icon(2).png"
+    "light": "/images/android-chrome-512x512.png",
+    "dark": "/images/android-chrome-512x512.png"
   },
   "logo": {
     "light": "/images/light-docs-logo.png",
