@@ -40,10 +40,10 @@
             "group": "User Manuals",
             "icon": "book-open",
             "pages": [
-              "opendoorsim/user-manuals/operating-guide",
-              "opendoorsim/user-manuals/configuration",
               "opendoorsim/user-manuals/flashing-firmware",
               "connect-a-reader",
+              "opendoorsim/user-manuals/operating-guide",
+              "opendoorsim/user-manuals/configuration",
               "opendoorsim/user-manuals/troubleshooting"
             ]
           },
