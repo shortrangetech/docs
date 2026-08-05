@@ -2,6 +2,55 @@
 title: "Flashing Firmware"
 ---
 
-<Info>
-  Coming Soon
-</Info>
+Flash the board and filesystem using the quick flash script.
+
+Or, if you want a more granular experience, open the repo in your favorite IDE and install the PlatformIO extension.
+
+## Flash Using the Quick Flash Script
+
+<Steps>
+  <Step title="Clone the repository to your local machine" titleSize="h4">
+    ```text
+    git clone https://github.com/shortrangetech/opendoorsim.git
+    ```
+  </Step>
+  <Step title="Navigate into the project" titleSize="h4">
+    ```text
+    cd opendoorsim
+    ```
+  </Step>
+  <Step title="Run the flash script" titleSize="h4">
+    ```text
+    ./flash_board.sh
+    ```
+  </Step>
+</Steps>
+
+## Flash Using IDE and PlatformIO
+
+<Steps>
+  <Step title="Install your preferred IDE (such as VSCode) and the PlatformIO extension" titleSize="h4">
+  </Step>
+  <Step title="Clone the repository to your local machine" titleSize="h4">
+    ```text
+    git clone https://github.com/shortrangetech/opendoorsim.git
+    ```
+  </Step>
+  <Step title="Open the project folder in your IDE" titleSize="h4">
+    The PlatformIO extension should automatically detect the project and install any required dependencies.
+
+    Expand the PlatformIO sidebar to access the development tools.
+  </Step>
+  <Step title="Build Filesystem Image" titleSize="h4">
+    Under Esp32dev \> Platform, click **Build Filesystem Image** to build the filesystem.
+  </Step>
+  <Step title="Upload Filesystem Image" titleSize="h4">
+    Under Esp32dev \> Platform, click **Upload Filesystem Image** to upload the filesystem to the ESP32's LittleFS partition.
+  </Step>
+  <Step title="Build Firmware Image" titleSize="h4">
+    Under Esp32dev \> General, click **Build** to build the firmware image.
+  </Step>
+  <Step title="Upload Firmware Image" titleSize="h4">
+    Under Esp32dev \> General, click **Upload** to upload the firmware image.
+  </Step>
+</Steps>
